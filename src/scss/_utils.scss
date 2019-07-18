@@ -1,0 +1,17 @@
+// stylelint-disable declaration-no-important
+
+.for-desktop {
+	@include mobile {
+		display: none !important;
+	}
+}
+
+.for-mobile {
+	@include desktop {
+		display: none !important;
+	}
+}
+
+.is-hidden {
+	display: none;
+}

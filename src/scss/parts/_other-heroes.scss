@@ -1,0 +1,107 @@
+.other-heroes {
+	padding-top: vmin(47);
+	padding-bottom: vmin(47);
+	color: $color-black;
+	background: $color-white;
+
+	&__title {
+		margin-bottom: vmin(21);
+		font-family: $font-graphik;
+		font-weight: 600;
+		font-size: vmin(18);
+		line-height: vmin(22);
+		letter-spacing: 0.02em;
+		text-align: center;
+	}
+
+	&__descr {
+		display: none;
+		margin-top: vmin(23);
+		height: vmin(130);
+		text-align: center;
+
+		.swiper-slide-active & {
+			display: block;
+		}
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: vmin(18);
+		line-height: vmin(20);
+
+		&::after {
+			content: "";
+			display: block;
+			margin: vmin(10) auto;
+			width: vmin(119);
+			height: 1px;
+			background: $color-black;
+		}
+	}
+
+	&__info {
+		font-size: vmin(15);
+		line-height: vmin(16);
+		letter-spacing: 0.05em;
+	}
+
+	&__item {
+		display: block;
+		margin: auto;
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+		color: $color-black;
+	}
+
+	&__photo {
+		position: relative;
+		height: vmin(311);
+		background-position: 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		@media screen and (orientation: landscape) {
+			height: vmin(620);
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		left: 50%;
+		top: vmin(140);
+		z-index: 4;
+		outline: 0;
+		border: 0;
+		padding: 0;
+		width: vmin(14.5);
+		height: vmin(26);
+		text-indent: -9999px;
+		background-color: transparent;
+		transform: translateX(-50%);
+	}
+
+	.slick-prev {
+		margin-left: vmin(-129);
+		background: url("../images/arrow-left.png") no-repeat;
+		background-size: contain;
+	}
+
+	.slick-next {
+		margin-left: vmin(126);
+		background: url("../images/arrow-right.png") no-repeat;
+		background-size: contain;
+	}
+}

@@ -1,0 +1,20 @@
+mixin block-hero(options)
+	.page__block.hero(
+		class={'hero--dark': options.dark}
+		data-item=options.id
+		data-mobile="hidden"
+		id=`hero${options.id}`
+	)
+		.hero__bg(
+			class={'hero__bg--overlay': options.overlay}
+			class={'hero__bg--right-overlay': options.rightOverlay}
+		)
+			img(src=options.bg alt="")
+		.hero__title
+			.page__container
+				.hero__content-title
+					.hero__name-title(
+						class={'hero__name-title--small': options.small}
+					)!= options.name
+					.hero__work-title!= options.work
+		block

@@ -1,0 +1,42 @@
++block-hero({
+	id: '3',
+	bg: '/images/content/hero3/bg@2x.jpg?v=2',
+	name: 'Массимилиано',
+	small: true,
+	work: 'традиционный ресторан <br> в&nbsp;сан-фредиано'
+})
+	+block-hero-info({
+		photo: '/images/content/hero3/photo.png',
+		text: 'владелец ресторана',
+		name: 'снимок сделан на&nbsp;canon eos&nbsp;r',
+		title: 'RF&nbsp;35mm f/1.8&nbsp;IS Macro STM',
+		diaphragm: 'f/1.8',
+		excerpt: '1/2500 сек',
+		iso: '1250'
+	})
+		+block-hero-info-text
+			p Я&nbsp;знал одного русского ресторатора, у&nbsp;него был бизнес то&nbsp;ли в&nbsp;Москве, то&nbsp;ли в&nbsp;Петербурге. Он&nbsp;во&nbsp;Флоренцию по&nbsp;нескольку раз в&nbsp;месяц приезжал, закупался сырами и&nbsp;всем прочим. Про итальянцев часто шутят, мол, каждый второй из&nbsp;нас&nbsp;&mdash; мафиози, но&nbsp;это неправда, конечно&nbsp;же. А&nbsp;вот тот русский точно был похож на&nbsp;персонажа из&nbsp;&laquo;Крестного отца&raquo;. Кстати, он&nbsp;умер несколько лет назад. При невыясненных обстоятельствах.
+			p &laquo;Ты&nbsp;бываешь с&nbsp;семьей, Джонни? Тому, кто не&nbsp;может найти время для своей семьи, никогда не&nbsp;стать настоящим мужчиной&raquo;. Великий фильм все-таки. Вот чем, кстати, хорош семейный бизнес: ты&nbsp;так или иначе постоянно проводишь время со&nbsp;своими близкими. У&nbsp;нас есть участок земли за&nbsp;городом. Небольшая оливковая роща, виноградник, так что вино и&nbsp;масло&nbsp;&mdash; собственного производства. Ну&nbsp;и&nbsp;свиней мы&nbsp;держим. Мясо всегда свежайшее, гарантированного качества.
+			p.for-desktop Наш райончик Сан-Фредиано за&nbsp;последние десятилетия особо не&nbsp;изменился. Выхожу из&nbsp;дома, и&nbsp;неважно, пешком или на&nbsp;машине,&nbsp;&mdash; все равно передвигаюсь с&nbsp;черепашьей скоростью: пока до&nbsp;ресторана доберусь, могу с&nbsp;сотней прохожих поздороваться, и&nbsp;каждого из&nbsp;них я&nbsp;знаю по&nbsp;имени. Здесь все друг с&nbsp;другом знакомы всю жизнь. Центр вроде в&nbsp;двух шагах, но&nbsp;до&nbsp;нас вся эта суета не&nbsp;долетает. Случайных людей мало. Время будто&nbsp;бы замерло, ну&nbsp;в&nbsp;хорошем смысле.
+
+			.hero__bottom-text.for-desktop
+				p Широкоугольный объектив #[b Canon RF&nbsp;35mm f/1.8&nbsp; IS Macro STM] с&nbsp;естественной перспективой идеально подойдет не только для макросъемки, но и для стрит-фотографии и&nbsp;съемки во&nbsp;время путешествий. Он&nbsp;позволит создать кадры с&nbsp;высоким уровнем детализации и&nbsp;резкости без вспышек и&nbsp;дополнительных источников света.
+				a.hero__product-link(href="https://store.canon.ru/ob-ektiv-rf-35mm-f-1-8-is-macro-stm.html?utm_source=RBC&utm_medium=special_project&utm_content=RF_35mm_f18_IS_MACRO_STM&utm_campaign=RU_CIGmktg_CAMERA_EOS_R_SP_Dec2018-Jan2019" target="_blank") узнать больше
+
+	+block-hero-quote('пока до&nbsp;ресторана доберусь,<br> могу с&nbsp;сотней прохожих поздороваться, и&nbsp;каждого из&nbsp;них я&nbsp;знаю по&nbsp;имени', 'small')
+
+	+block-hero-img('/images/content/hero3/img@2x.jpg')
+
+	+block-hero-quote-mobile('пока до&nbsp; ресторана доберусь, могу с&nbsp;сотней прохожих поздороваться, и&nbsp;каждого из&nbsp;них я&nbsp;знаю по&nbsp;имени')
+
+	+block-hero-info-text-mobile
+		p Наш райончик Сан-Фредиано за&nbsp;последние десятилетия особо не&nbsp;изменился. Выхожу из&nbsp;дома, и&nbsp;неважно, пешком или на&nbsp;машине,&nbsp;&mdash; все равно передвигаюсь с&nbsp;черепашьей скоростью: пока до&nbsp;ресторана доберусь, могу с&nbsp;сотней прохожих поздороваться, и&nbsp;каждого из&nbsp;них я&nbsp;знаю по&nbsp;имени. Здесь все друг с&nbsp;другом знакомы всю жизнь. Центр вроде в&nbsp;двух шагах, но&nbsp;до&nbsp;нас вся эта суета не&nbsp;долетает. Случайных людей мало. Время будто&nbsp;бы замерло, ну&nbsp;в&nbsp;хорошем смысле.
+
+	include ../components/social-mobile
+	include banner-mobile
+
+	+otherHeroes()
+		+otherHeroesSlide(4)
+		+otherHeroesSlide(5)
+		+otherHeroesSlide(1)
+		+otherHeroesSlide(2)

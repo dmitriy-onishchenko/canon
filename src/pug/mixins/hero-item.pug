@@ -1,0 +1,15 @@
+mixin hero-item(options)
+	.info__hero(
+		class=`info__hero--${options.number}`
+	)
+		.info__content-hero
+			.info__visible-hero
+				.info__photo-hero
+					img(src=options.img srcset=(options.img2x ? `${options.img2x} 2x` : '') alt= options.name)
+				.info__name-hero.for-desktop!= options.name
+			a.info__more-hero.nav-page(href=`#hero${options.number}`)
+				.info__more-hero-content
+					.info__title-hero
+						.info__detail-name(class={'info__detail-name--small': options.small})!= options.name
+						.info__detail-work.info__detail-work--small!= options.work
+					.info__detail-text!= options.text

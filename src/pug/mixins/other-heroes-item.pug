@@ -1,0 +1,7 @@
+mixin other-heroes-item(options)
+	.other-heroes__slide.swiper-slide
+		a.other-heroes__item(href!= options.href data-router-link)
+			.other-heroes__photo(style=`background-image: url(${options.img})`)
+			.other-heroes__descr
+				.other-heroes__name!= options.name
+				.other-heroes__info!= options.text

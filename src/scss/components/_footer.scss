@@ -1,0 +1,44 @@
+.footer {
+	padding-top: 35px;
+	padding-bottom: 20px;
+	font-size: 13px;
+	line-height: 21px;
+	letter-spacing: 0.01em;
+
+	&__container {
+		@include desktop {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: auto;
+			width: vw(1374);
+		}
+	}
+
+	&__develop {
+		max-width: 645px;
+
+		@include mobile {
+			margin: auto;
+		}
+	}
+
+	&__copyright {
+		@include desktop {
+			position: relative;
+			top: -11px;
+		}
+
+		@include mobile {
+			margin-top: vmin(27);
+		}
+	}
+
+	@include mobile {
+		border-top: 1px solid #e5e5e5;
+		padding: vmin(21.5) vmin(16) vmin(21) vmin(16);
+		font-size: vmin(15);
+		line-height: vmin(23);
+		text-align: center;
+	}
+}

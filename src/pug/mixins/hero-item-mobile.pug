@@ -1,0 +1,11 @@
+mixin hero-item-mobile(options)
+	.info__hero.swiper-slide
+		a.info__content-hero(href!= options.href data-router-link)
+			.info__visible-hero
+				.info__photo-hero(style=`background-image: url(${options.img})`)
+			.info__more-hero
+				.info__more-hero-content
+					.info__title-hero(class={'info__title-hero--small': options.small})
+						.info__detail-name!= options.name
+					.info__detail-text!= options.text
+		a.info__btn-hero(href!= options.href data-router-link) узнать больше

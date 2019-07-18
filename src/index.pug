@@ -1,0 +1,39 @@
+extends pug/base
+
+prepend vars
+	- title = 'Портреты Флоренции: город и его жители'
+	- description = 'Жители Флоренции рассказали, чем они занимаются и за что любят свой город'
+	- image = '/images/share/main.jpg'
+
+append vars
+	- link.appleTouchIcon180x180 = '/apple-touch-icon.png'
+	- link.icon32x32 = '/favicon-32x32.png'
+	- link.icon16x16 = '/favicon-16x16.png'
+	- link.manifest = '/site.webmanifest'
+	- link.maskIcon.href = '/safari-pinned-tab.svg'
+	- link.maskIcon.color = '#5bbad5'
+	- meta.msapplicationTileColor = '#ffffff'
+	- meta.themeColor = '#ffffff'
+
+block content
+	.page(data-mobile="hidden")
+		include pug/components/share
+		include pug/components/nav
+		include pug/components/mobile-nav
+		include pug/components/header
+		include pug/parts/info
+		include pug/parts/hero1
+		include pug/parts/hero2
+		include pug/parts/hero3
+		include pug/parts/hero4
+		include pug/parts/hero5
+		include pug/components/social
+		include pug/parts/banner
+		include pug/components/footer
+
+prepend scripts
+	include pug/components/google-analytics
+	include pug/components/yandex-metrika
+
+append body-end
+	include pug/components/tns-counter

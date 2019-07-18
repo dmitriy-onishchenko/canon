@@ -1,0 +1,29 @@
+@mixin aspect-ratio() {
+	@media (max-width: 1440px), (max-height: 850px) {
+		@content;
+	}
+}
+
+@mixin max-aspect-ratio($maxRatio: 1440, $minRatio: 850) {
+	@media (max-aspect-ratio: #{$maxRatio} / #{$minRatio}) {
+		@content;
+	}
+}
+
+@mixin min-aspect-ratio($maxRatio: 1440, $minRatio: 850) {
+	@media (min-aspect-ratio: #{$maxRatio} / #{$minRatio}) {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin desktop() {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}

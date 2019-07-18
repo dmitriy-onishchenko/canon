@@ -1,0 +1,50 @@
+.slider-button {
+	position: absolute;
+	left: 50%;
+	z-index: 4;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	width: vmin(14.5);
+	height: vmin(26);
+	text-indent: -9999px;
+	background-color: transparent;
+	transform: translateX(-50%);
+
+	&--prev {
+		margin-left: vmin(-130);
+		background: url("../images/arrow-left.png") no-repeat;
+		background-size: contain;
+
+		@media screen and (orientation: landscape) {
+			left: vmin(130);
+			margin-left: 0;
+			transform: none;
+		}
+	}
+
+	&--next {
+		margin-left: vmin(127);
+		background: url("../images/arrow-right.png") no-repeat;
+		background-size: contain;
+
+		@media screen and (orientation: landscape) {
+			left: auto;
+			right: vmin(130);
+			margin-left: 0;
+			transform: none;
+		}
+	}
+
+	.main-mobile-slider & {
+		top: 39%;
+	}
+
+	.other-heroes__carousel & {
+		top: vmin(140);
+
+		@media screen and (orientation: landscape) {
+			top: vmin(280);
+		}
+	}
+}

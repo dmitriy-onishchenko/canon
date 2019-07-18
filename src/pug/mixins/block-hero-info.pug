@@ -1,0 +1,49 @@
+mixin block-hero-info(options)
+	.hero__info(data-animation="true")
+		.page__container
+			.hero__content-info
+				.hero__left-block
+					.hero__photo-info
+						.hero__item-info(class={'hero__item-info--overlay': options.overlay})
+							.hero__descr-info.for-desktop
+								a.hero__icon-info(href="https://store.canon.ru/bezzerkal-naja-kamera-eos-r-s-adapterom-kreplenija-ef-eos-r.html?utm_source=RBC&utm_medium=special_project&utm_content=EOS_R&utm_campaign=RU_CIGmktg_CAMERA_EOS_R_SP_Dec2018-Jan2019" target="_blank")
+									+svg('photo-icon')
+								a.hero__text-info(href="https://store.canon.ru/bezzerkal-naja-kamera-eos-r-s-adapterom-kreplenija-ef-eos-r.html?utm_source=RBC&utm_medium=special_project&utm_content=EOS_R&utm_campaign=RU_CIGmktg_CAMERA_EOS_R_SP_Dec2018-Jan2019" target="_blank")
+									.hero__product-name!= options.name
+									.hero__product-info
+										.hero__product-title!= options.title
+										.hero__product-text
+											span диафрагма:&nbsp;
+											span!= options.diaphragm
+										.hero__product-text
+											span выдержка:&nbsp;
+											span!= options.excerpt
+										.hero__product-text
+											span ISO:&nbsp;
+											span!= options.iso
+							img(src=options.photo srcset=(options.photo2x ? `${options.photo2x} 2x` : '') alt="")
+							.hero__info-mobile.for-mobile
+								a.hero__text-info(href="https://store.canon.ru/bezzerkal-naja-kamera-eos-r-s-adapterom-kreplenija-ef-eos-r.html?utm_source=RBC&utm_medium=special_project&utm_content=EOS_R&utm_campaign=RU_CIGmktg_CAMERA_EOS_R_SP_Dec2018-Jan2019" target="_blank")
+									.hero__product-name!= options.name
+									.hero__product-info
+										.hero__product-title!= options.title
+										.hero__product-text
+											span диафрагма:&nbsp;
+											span!= options.diaphragm
+										.hero__product-text
+											span выдержка:&nbsp;
+											span!= options.excerpt
+										.hero__product-text
+											span ISO:&nbsp;
+											span!= options.iso
+								button.hero__share-bottom(type="button")
+									+svg('share')
+					.hero__line
+
+					.hero__bottom
+						.hero__text-bottom!= options.text
+						.hero__share-bottom.for-desktop
+							+svg('share')
+							.hero__social
+								include ../components/hero-share
+				block

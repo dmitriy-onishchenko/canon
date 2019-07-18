@@ -1,0 +1,600 @@
+.hero {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	background: $color-twilight-blue;
+
+	&__info {
+		position: relative;
+	}
+
+	&__line {
+		position: relative;
+		left: 0;
+		clear: both;
+		width: 100%;
+		height: 3px;
+		background: $color-free-speech-red;
+
+		@include desktop {
+			top: 27px;
+		}
+
+		@include mobile {
+			left: 50%;
+			margin-top: vmin(10);
+			margin-left: vmin(-79);
+			transform: translateX(-50%);
+		}
+	}
+
+	&__bg {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		height: 100vh;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			font-family: "object-fit: cover;";
+			object-fit: cover;
+			transform: translateZ(0);
+		}
+
+		&--overlay {
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.72%, rgba(0, 0, 0, 0.57) 64.89%);
+				transform: rotate(180deg);
+			}
+		}
+
+		&--right-overlay {
+			overflow: hidden;
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: vh(-109);
+				width: vw(916);
+				height: vh(590);
+				background: radial-gradient(295px at 50% 50%, rgba(173, 192, 215, 0.5) 0%, rgba(173, 192, 215, 0.42) 20%, rgba(173, 192, 215, 0) 100%);
+			}
+		}
+
+		@include desktop {
+			[data-item="1"] & {
+				align-items: flex-start;
+
+				img {
+					width: auto;
+					height: 150vh;
+				}
+			}
+		}
+
+		@include mobile {
+			height: vmin(277.5);
+		}
+	}
+
+	&__title {
+		position: absolute;
+		top: vh(129);
+		z-index: 2;
+		width: 100%;
+		color: $color-white;
+
+		@include mobile {
+			top: vmin(44);
+		}
+	}
+
+	&__content-title {
+		padding-left: 45px;
+
+		@include mobile {
+			padding-right: vmin(16);
+			padding-left: vmin(16);
+		}
+	}
+
+	&__name-title {
+		font-family: $font-regal;
+		font-size: 144px;
+		line-height: 149px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+
+		&--small {
+			font-size: 106px;
+			line-height: 109px;
+		}
+
+		@include mobile {
+			font-size: vmin(49);
+			line-height: vmin(51);
+			letter-spacing: 0.02em;
+
+			&--small {
+				font-size: vmin(34);
+				line-height: vmin(32);
+			}
+		}
+	}
+
+	&__work-title {
+		position: relative;
+		font-weight: 100;
+		font-size: 45px;
+		line-height: 46px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+
+		@include desktop {
+			margin-top: 10px;
+		}
+
+		@include mobile {
+			font-size: vmin(24);
+			line-height: vmin(23);
+			letter-spacing: 0.16em;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__content-info {
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			padding-right: 50px;
+			padding-left: 163px;
+		}
+	}
+
+	&__item-info {
+		position: relative;
+
+		@include desktop {
+			overflow: hidden;
+
+			&--overlay {
+				&::before {
+					content: "";
+					position: absolute;
+					left: -65px;
+					bottom: 0;
+					display: block;
+					width: 306px;
+					height: 174.55px;
+					background: radial-gradient(110px at 50% 52%, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+				}
+			}
+		}
+
+		@include mobile {
+			margin: auto;
+			width: vmin(220);
+		}
+	}
+
+	&__icon-info {
+		display: block;
+		width: 14px;
+		height: 10.57px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__product-name {
+		max-width: 139px;
+		text-transform: uppercase;
+	}
+
+	&__product-info {
+		margin-top: 15px;
+
+		@include desktop {
+			line-height: 1.4;
+		}
+	}
+
+	&__product-title {
+		text-transform: uppercase;
+	}
+
+	&__bottom-text {
+		margin-top: 35px;
+		border-top: 1px solid $color-free-speech-red;
+		padding-top: 35px;
+
+		p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 32px;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+
+			b {
+				font-weight: 500;
+			}
+
+			@include desktop {
+				width: 445px;
+			}
+
+			@include mobile {
+				font-size: vmin(16);
+				line-height: vmin(32);
+			}
+		}
+
+		@include mobile {
+			margin-top: vmin(35);
+			padding-top: vmin(35);
+		}
+	}
+
+	&__product-link {
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 46px;
+		border: 1px solid $color-free-speech-red;
+		width: 161px;
+		height: 37px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 35px;
+		letter-spacing: 0.02em;
+		text-align: center;
+		text-decoration: none;
+		color: $color-black;
+		transition: color 0.4s, background 0.4s;
+
+		@include desktop {
+			&:hover {
+				color: $color-white;
+				background: $color-free-speech-red;
+			}
+
+			.hero--dark & {
+				color: $color-white;
+			}
+		}
+
+		@include mobile {
+			margin-top: vmin(23);
+			width: vmin(161);
+			height: vmin(37);
+			font-size: vmin(14);
+			line-height: vmin(35);
+		}
+	}
+
+	&__text-info {
+		display: block;
+		margin-top: 10px;
+		outline: 0;
+		border: 0;
+		font-weight: 300;
+		font-size: 12px;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+
+		@include desktop {
+			color: $color-white;
+		}
+
+		@include mobile {
+			margin-top: 0;
+			max-width: vmin(139);
+			font-weight: 400;
+			font-size: vmin(12);
+			line-height: vmin(16);
+			color: $color-black;
+		}
+	}
+
+	&__descr-info {
+		position: absolute;
+		left: 34.25px;
+		bottom: 20px;
+		z-index: 2;
+		color: $color-white;
+	}
+
+	&__bottom {
+		position: relative;
+		padding-top: 46px;
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			clear: both;
+			float: right;
+			width: 439.3px;
+		}
+
+		@include mobile {
+			position: relative;
+			left: vmin(23);
+			margin: auto;
+			padding-top: vmin(24);
+			width: vmin(266);
+		}
+	}
+
+	&__info-mobile {
+		display: flex;
+		justify-content: space-between;
+		margin-top: vmin(10);
+	}
+
+	&__left-block {
+		@include desktop {
+			position: absolute;
+			left: 0;
+			z-index: 2;
+			margin-top: -321px;
+			width: vw(730);
+		}
+
+		@include mobile {
+			position: relative;
+			margin-top: vmin(-115);
+		}
+	}
+
+	&__photo-info {
+		img {
+			vertical-align: middle;
+			height: auto;
+			max-width: 100%;
+		}
+
+		@include desktop {
+			float: right;
+			width: 439.3px;
+		}
+	}
+
+	&__text-bottom {
+		text-transform: uppercase;
+
+		@include desktop {
+			max-width: 310px;
+			font-weight: 300;
+			font-size: 17px;
+			line-height: 27px;
+			letter-spacing: 0.02em;
+		}
+
+		@include mobile {
+			font-size: vmin(17);
+			line-height: vmin(28);
+			letter-spacing: 0.02em;
+		}
+	}
+
+	&__share-bottom {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		outline: 0;
+		border: 0;
+		padding: 0;
+		width: 25px;
+		height: 22px;
+		background: none;
+		cursor: pointer;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:focus,
+		&:hover {
+			.hero__social {
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+			}
+		}
+
+		@include desktop {
+			left: 2px;
+			top: 7px;
+		}
+
+		@include mobile {
+			width: vmin(25);
+			height: vmin(22);
+		}
+	}
+
+	&__social {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding-right: 33px; // где 33 = 25 + 8, 25 - это ширина кнопки hero__share-bottom, а 8 - отступ
+		opacity: 0;
+		visibility: hidden;
+		transform: translate3d(15px, 0, 0);
+		transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+		&:focus,
+		&:hover {
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__text {
+		padding-top: 73px;
+		font-size: 16px;
+		line-height: 32px;
+		letter-spacing: 0.02em;
+
+		p {
+			margin: 0;
+		}
+
+		@include desktop {
+			max-width: 434px;
+
+			p {
+				+ p {
+					margin-top: 32px;
+				}
+			}
+		}
+
+		@include mobile {
+			margin-top: vmin(29);
+			padding-top: 0;
+			padding-right: vmin(13);
+			padding-left: vmin(14);
+			font-size: vmin(18);
+			line-height: vmin(32);
+
+			&--bottom {
+				margin-top: vmin(32);
+				padding-bottom: vmin(10);
+			}
+		}
+	}
+
+	&__quote-item {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+	}
+
+	&__quote {
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		width: 1025px;
+
+		&.is-unvisible {
+			transform: translate3d(0, 40px, 0);
+		}
+
+		&.is-fixed {
+			position: fixed;
+			left: 50%;
+			top: 0;
+			margin-left: -(1025 / 2) + 80px;
+		}
+
+		@include desktop {
+			left: 80px;
+		}
+
+		@include mobile {
+			position: relative;
+			left: vmin(7);
+			margin: auto;
+			margin-top: vmin(35);
+			width: vmin(275);
+		}
+	}
+
+	&__icon-quote {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-family: $font-obsidian;
+		font-size: 200px;
+		line-height: 233px;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		transform: translate(-81%, -61%);
+
+		@include desktop {
+			.hero--dark & {
+				color: $color-free-speech-red;
+			}
+		}
+
+		@include mobile {
+			left: vmin(28);
+			top: vmin(-12);
+			font-size: vmin(160);
+			line-height: vmin(186);
+		}
+	}
+
+	&__text-quote {
+		font-family: $font-playfair;
+		font-size: 55px;
+		line-height: 71px;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+
+		@include desktop {
+			&--small {
+				font-size: 50px;
+				line-height: 65px;
+			}
+		}
+
+		@include mobile {
+			font-size: vmin(24);
+			line-height: vmin(34);
+			letter-spacing: 0.04em;
+		}
+	}
+
+	&__img {
+		position: relative;
+		margin: auto;
+		background-position: 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include desktop {
+			width: 100vw;
+			height: 100vh;
+			opacity: 0.76;
+			transform: scale(0.35);
+		}
+
+		@include mobile {
+			margin-top: vmin(42);
+			height: vmin(370);
+		}
+	}
+
+	@include desktop {
+		&--dark {
+			color: $color-white;
+			background: $color-black;
+		}
+	}
+}

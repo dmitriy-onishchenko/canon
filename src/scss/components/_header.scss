@@ -1,0 +1,98 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	padding-top: 33px;
+	width: 100%;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s, visibility 0.5s;
+	will-change: opacity, visibility;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: auto;
+		width: vw(1374);
+
+		@include mobile {
+			padding: 0 vmin(15);
+			width: 100%;
+		}
+	}
+
+	&__project-text {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 18px;
+		font-size: 12px;
+		letter-spacing: 0.06em;
+	}
+
+	&__project-logo {
+		display: inline-block;
+		vertical-align: middle;
+		width: 107px;
+		height: 23px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include mobile {
+			position: relative;
+			top: vmin(-3);
+			width: vmin(81);
+			height: vmin(17);
+		}
+	}
+
+	&.is-invisible {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	@include mobile {
+		position: relative;
+		padding-top: vmin(11);
+		padding-bottom: vmin(9);
+	}
+}
+
+.logo-rbc {
+	display: block;
+	width: 144px;
+	height: 21px;
+	background: url("../images/rbc-logo.png") no-repeat;
+	background-size: contain;
+
+	@include mobile {
+		position: relative;
+		top: vmin(-2);
+		width: vmin(114);
+		height: vmin(15);
+	}
+}
+
+.js-burger {
+	position: relative;
+	right: vmin(17);
+	top: vmin(-3);
+	outline: 0;
+	border: 0;
+	padding: 0;
+	width: vmin(33);
+	height: vmin(11);
+	background: none;
+	cursor: pointer;
+
+	&__icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,19 @@
+.page__block.other-heroes.for-mobile(data-mobile="hidden")
+	.other-heroes__title Читайте также
+	.other-heroes__carousel.swiper-container
+		.swiper-wrapper
+			+other-heroes-item({
+				href: '/article/1',
+				img: '/images/heroes/1@2x.jpg',
+				name: 'Америго Веспуччи',
+				text: 'молодой режиссер о&nbsp;жизни во&nbsp;Флоренции',
+			})
+			+other-heroes-item({
+				href: '/article/5',
+				img: '/images/heroes/4@2x.jpg',
+				name: 'Никколо Маккиавели',
+				text: 'молодой режиссер о&nbsp;жизни во&nbsp;Флоренции',
+			})
+
+		.slider-button.slider-button--prev
+		.slider-button.slider-button--next

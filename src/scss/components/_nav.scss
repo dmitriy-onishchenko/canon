@@ -1,0 +1,116 @@
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	background: $color-white;
+	transition: opacity 0.4s, visibility 0.4s;
+	will-change: opacity, visibility;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		height: vh(109);
+		max-height: 109px;
+		font-size: 18px;
+		line-height: 18px;
+		letter-spacing: 0.06em;
+		text-align: center;
+		text-decoration: none;
+		color: $color-black;
+
+		@include desktop {
+			position: relative;
+			transition: color 0.5s ease;
+
+			&:hover {
+				.nav__text {
+					&::before {
+						width: calc(50% + 12px);
+					}
+
+					&::after {
+						width: calc(50% + 12px);
+					}
+				}
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: -10px;
+			top: 9px;
+			display: block;
+			border-radius: 5px;
+			width: 0;
+			height: 2px;
+			background: $color-free-speech-red;
+			transition: width 0.4s;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -10px;
+			bottom: 7px;
+			display: block;
+			border-radius: 5px;
+			width: 0;
+			height: 2px;
+			background: $color-free-speech-red;
+			transition: width 0.4s;
+		}
+
+		.is-active & {
+			&::before {
+				width: calc(50% + 12px);
+			}
+
+			&::after {
+				width: calc(50% + 12px);
+			}
+		}
+	}
+
+	&__progress {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		width: 0;
+		height: 3px;
+		background: $color-free-speech-red;
+	}
+
+	&.is-show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: vw(105);
+		padding-left: vw(97);
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.progress-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 0;
+	height: 3px;
+	background: $color-free-speech-red;
+}

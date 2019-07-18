@@ -1,0 +1,17 @@
+.page {
+	&__container {
+		margin: auto;
+		max-width: 1234px;
+	}
+}
+
+.is-unvisible {
+	opacity: 0 !important; // stylelint-disable-line
+	visibility: hidden !important; // stylelint-disable-line
+}
+
+@include mobile {
+	[data-mobile="hidden"] {
+		display: none !important; // stylelint-disable-line
+	}
+}

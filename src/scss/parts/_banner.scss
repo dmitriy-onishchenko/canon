@@ -1,0 +1,198 @@
+.banner {
+	display: flex;
+	align-items: center;
+	height: 576px;
+	color: $color-white;
+	background: $color-black;
+
+	&__title {
+		position: relative;
+	}
+
+	&__lines-title {
+		position: absolute;
+		width: 382.87px;
+		height: 406.93px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include desktop {
+			left: -97px;
+			top: -11px;
+		}
+
+		@include mobile {
+			left: 50%;
+			top: vmin(3);
+			margin-left: vmin(-22);
+			width: vmin(161);
+			height: vmin(171);
+			transform: translateX(-50%);
+		}
+	}
+
+	&__img-title {
+		position: relative;
+		top: -13px;
+		z-index: 2;
+		width: 346.76px;
+		height: 354.58px;
+		background: url("../images/canon.png") no-repeat 50%;
+		background-size: contain;
+
+		@include mobile {
+			left: vmin(10);
+			top: 0;
+			margin: auto;
+			width: vmin(148);
+			height: vmin(151);
+		}
+	}
+
+	&__content {
+		margin: auto;
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 58px;
+			width: 850px;
+		}
+	}
+
+	&__text-title {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__title-info {
+		font-weight: 500;
+		font-size: 54px;
+		line-height: 63px;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+
+		&::after {
+			content: "";
+			display: block;
+			margin-top: 3px;
+			width: 98%;
+			height: 3px;
+			background: $color-free-speech-red;
+		}
+
+		@include mobile {
+			font-size: vmin(32);
+			line-height: vmin(38);
+
+			&::after {
+				position: relative;
+				top: vmin(-3);
+				margin-top: vmin(9);
+				width: 98%;
+			}
+		}
+	}
+
+	&__icon-title {
+		position: relative;
+		top: -3px;
+		left: 2px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		width: 156px;
+		height: 41px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include mobile {
+			width: vmin(88);
+			height: vmin(22);
+		}
+	}
+
+	&__info {
+		position: relative;
+
+		@include desktop {
+			left: 70px;
+			top: -31px;
+		}
+
+		@include mobile {
+			top: vmin(-5);
+			margin-top: vmin(42);
+		}
+	}
+
+	&__text-info {
+		margin-top: 30px;
+		max-width: 400px;
+		font-size: 17px;
+		line-height: 28px;
+		letter-spacing: 0.01em;
+
+		@include mobile {
+			position: relative;
+			top: vmin(-6);
+			margin-top: vmin(14);
+			max-width: vmin(240);
+			font-size: vmin(15);
+			line-height: vmin(23);
+		}
+	}
+
+	&__link-info {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 48px;
+		outline: 0;
+		border: 3px solid $color-free-speech-red;
+		border-radius: 100px;
+		width: 210px;
+		height: 54px;
+		font-size: 16px;
+		line-height: 47px;
+		letter-spacing: 0.05em;
+		text-align: center;
+		text-decoration: none;
+		color: $color-white;
+		transition: background 0.4s;
+
+		@include desktop {
+			&:hover {
+				background: $color-free-speech-red;
+			}
+		}
+
+		@include mobile {
+			right: 0;
+			top: vmin(-11);
+			margin-top: vmin(44);
+			width: vmin(198);
+			height: vmin(52);
+			font-size: vmin(16);
+			line-height: vmin(47);
+		}
+	}
+
+	@include desktop {
+		position: relative;
+		z-index: 2;
+	}
+
+	@include mobile {
+		height: vmin(541);
+	}
+}

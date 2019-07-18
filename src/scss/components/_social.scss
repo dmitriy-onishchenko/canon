@@ -1,0 +1,53 @@
+.social {
+	padding: 38px 0;
+	text-align: center;
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		outline: 0;
+		border: 0;
+		width: 101px;
+		font-family: $font-graphik;
+		font-size: 16px;
+		line-height: 30px;
+		text-align: center;
+		text-decoration: underline;
+		background: none;
+		transition: color 0.4s;
+		cursor: pointer;
+
+		@include desktop {
+			margin: 0 12px;
+
+			&:hover {
+				color: $color-free-speech-red;
+			}
+		}
+
+		@include mobile {
+			margin: 0 vmin(2.5);
+			padding: 0;
+			width: vmin(101);
+			font-size: vmin(16);
+			line-height: vmin(30);
+		}
+	}
+
+	@include desktop {
+		position: relative;
+		z-index: 2;
+		background: $color-white;
+	}
+
+	@include mobile {
+		padding-top: vmin(67);
+		padding-bottom: vmin(55);
+
+		[data-page="article"] & {
+			padding-top: vmin(45);
+			padding-bottom: vmin(63);
+			background: $color-twilight-blue;
+		}
+	}
+}

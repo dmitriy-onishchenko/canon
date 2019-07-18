@@ -1,0 +1,107 @@
+.page__block.info(data-mobile="hidden")
+	.page__container
+		.info__content
+			.info__fixed
+				.info__title Портреты Флоренции:
+				.info__subtitle город и его жители
+				.info__text Специально для совместного проекта &laquo;РБК Стиль&raquo; и&nbsp;Canon писатель Сергей Кумыш и&nbsp;фотограф Алексей Калабин отправились во&nbsp;Флоренцию, чтобы поговорить с&nbsp;ее&nbsp;жителями и&nbsp;узнать, чем они занимаются и&nbsp;за&nbsp;что любят свой город.
+
+			.info__bg-text.for-desktop(data-scroll-speed="1.9")
+				.info__line-item фло
+				.info__line-item рен
+				.info__line-item ция
+
+			.info__hero-list.for-desktop(data-scroll-speed="1.9")
+				+hero-item({
+					number: 1,
+					img: '/images/heroes/1.jpg',
+					img2x: '/images/heroes/1@2x.jpg',
+					name: 'Джованни',
+					work: 'обувщик',
+					text: 'О&nbsp;работе подмастерьем, традициях и&nbsp;любимом деле.'
+				})
+
+				+hero-item({
+					number: 2,
+					img: '/images/heroes/2.jpg',
+					img2x: '/images/heroes/2@2x.jpg',
+					name: 'Даниэла',
+					work: 'владелица фруктово-<br>овощной лавки',
+					workSmall: true,
+					text: 'О&nbsp;семейном бизнесе, который начался 65&nbsp;лет назад.'
+				})
+
+				+hero-item({
+					number: 3,
+					img: '/images/heroes/3.jpg',
+					img2x: '/images/heroes/3@2x.jpg',
+					small: true,
+					name: 'Массимилиано',
+					work: 'владелец<br>ресторана',
+					text: 'Об&nbsp;оливковой<br>роще и&nbsp;персонаже из&nbsp;&laquo;Крестного отца&raquo;.'
+				})
+
+				+hero-item({
+					number: 4,
+					img: '/images/heroes/4.jpg',
+					img2x: '/images/heroes/4@2x.jpg',
+					name: 'Симоне',
+					work: 'мастер<br>по&nbsp;ремонту',
+					text: 'О&nbsp;том, кто ломает велосипеды и&nbsp;куда приезжал Папа Франциск.'
+				})
+
+				+hero-item({
+					number: 5,
+					img: '/images/heroes/5.jpg',
+					img2x: '/images/heroes/5@2x.jpg',
+					name: 'Эммануэль',
+					work: 'разнорабочий в&nbsp;садах Боболи',
+					text: 'О&nbsp;красоте Флоренции и&nbsp;невероятных рассветах.'
+				})
+
+			.main-mobile-slider.swiper-container.for-mobile
+				.swiper-wrapper
+					+hero-item-mobile({
+						number: 1,
+						href: '/article/1',
+						img: '/images/heroes/1@2x.jpg',
+						name: 'Джованни',
+						text: 'обувщик'
+					})
+
+					+hero-item-mobile({
+						number: 2,
+						href: '/article/2',
+						img: '/images/heroes/2@2x.jpg',
+						name: 'Даниэла',
+						text: 'владелица фруктово-овощной лавки'
+					})
+
+					+hero-item-mobile({
+						number: 3,
+						small: true,
+						href: '/article/3',
+						img: '/images/heroes/3@2x.jpg',
+						name: 'Массимилиано',
+						text: 'владелец ресторана'
+					})
+
+					+hero-item-mobile({
+						number: 4,
+						href: '/article/4',
+						img: '/images/heroes/4@2x.jpg',
+						name: 'Симоне',
+						text: 'мастер по&nbsp;ремонту велосипедов и&nbsp;мотоциклов'
+					})
+
+					+hero-item-mobile({
+						number: 5,
+						href: '/article/5',
+						img: '/images/heroes/5@2x.jpg',
+						name: 'Эммануэль',
+						text: 'разнорабочий в&nbsp;садах Боболи'
+					})
+				.slider-button.slider-button--prev
+				.slider-button.slider-button--next
+
+			include ../components/social-mobile
